@@ -87,7 +87,7 @@ export function AllocStatsReducer(state = {}, action) {
         },
         Memory: {
           Used:
-            (payload.Stats.ResourceUsage.MemoryStats.RSS +
+            (payload.Stats.ResourceUsage.MemoryStats.Usage +
               payload.Stats.ResourceUsage.MemoryStats.Cache +
               payload.Stats.ResourceUsage.MemoryStats.Swap) /
             1024 /
@@ -149,7 +149,7 @@ function computeResourceStats(state = {}, stats, resources) {
 
   let mem = {
     name: format(new Date(), "H:mm:ss"),
-    RSS: formatNumber(stats.MemoryStats.RSS / 1024 / 1024),
+    Usage: formatNumber(stats.MemoryStats.Usage / 1024 / 1024),
     Cache: formatNumber(stats.MemoryStats.Cache / 1024 / 1024),
     Swap: formatNumber(stats.MemoryStats.Swap / 1024 / 1024),
     Allocated: formatNumber(resources.MemoryMB)
@@ -182,7 +182,7 @@ function computeResourceStats(state = {}, stats, resources) {
 function prefillData(data) {
   for (let i = 0; i < 60; i++) {
     data.cpu.push({ name: "", Used: 0, System: 0, User: 0 })
-    data.memory.push({ name: "", RSS: 0, Cache: 0, Swap: 0 })
+    data.memory.push({ name: "", Usage: 0, Cache: 0, Swap: 0 })
   }
 
   return data

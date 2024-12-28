@@ -43,11 +43,11 @@ dist-clean:
 .PHONY: docker
 docker:
 	@echo "=> build and push Docker image ..."
-	docker build -f travis.Dockerfile -t jippi/hashi-ui:$(COMMIT) .
-	docker tag jippi/hashi-ui:$(COMMIT) jippi/hashi-ui:$(TAG)
-	docker push jippi/hashi-ui:$(TAG)
+	docker build -f travis.Dockerfile -t okury/hashi-ui:$(COMMIT) .
+	docker tag okury/hashi-ui:$(COMMIT) okury/hashi-ui:$(TAG)
+	docker push okury/hashi-ui:$(TAG)
 
 .PHONY: docker-dev
 docker-dev:
 	@echo "=> build Docker image ..."
-	docker build -f travis.Dockerfile -t jippi/hashi-ui:local-dev .
+	docker build -f travis.Dockerfile -t okury/hashi-ui:local-dev .

@@ -54,8 +54,7 @@ const config = {
               "babel-plugin-transform-object-rest-spread",
               "babel-plugin-transform-react-constant-elements",
               "syntax-dynamic-import",
-              "lodash",
-              "recharts"
+              "lodash"
             ]
           }
         }
