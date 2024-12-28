@@ -21,7 +21,7 @@ class StatsSet extends Component {
       { name: "User", stroke: orange500, fill: orange200 }
     ]
     const MemoryItems = [
-      { name: "RSS", stroke: green500, fill: green200 },
+      { name: "Usage", stroke: green500, fill: green200 },
       { name: "Cache", stroke: orange500, fill: orange200 },
       { name: "Swap", stroke: blue500, fill: blue200 }
     ]

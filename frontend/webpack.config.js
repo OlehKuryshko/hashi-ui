@@ -43,7 +43,6 @@ const config = {
           options: {
             babelrc: false,
             presets: [
-              "es2015",
               [
                 "env",
                 {
@@ -62,8 +61,7 @@ const config = {
               "babel-plugin-transform-react-constant-elements",
               "syntax-dynamic-import",
               "transform-runtime",
-              "lodash",
-              "recharts"
+              "lodash"
             ]
           }
         }
